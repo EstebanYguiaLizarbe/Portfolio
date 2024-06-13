@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esteban Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <a href="#home" class="logo">Esteban</a>
+
+        <i class="fa-solid fa-bars" class="menu-icon" id="menu-icon" ></i>
+        <!-- <img src="CLOSE.png" class="menu-icon" alt="" id="menu-icon"> -->
+        <nav class="navbar" id="navar">
+            <a href="#home" >Home</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#services">Servicios</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contacto</a>
+
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-img">
+            <img src="profile.jpg" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hola, <span>Aquí Esteban</span></h1>
+            <h3 class="typing-text">Yo soy <span></span></h3>
+            <p>Soy un Desarrollador con proyectos maravillosos y años de practica ya que mi objetivo es ayudar con tecnologia a solucionar problemas. Echale un vistazo y jusga mis proyectos por ti mismo</p>
+        
+            <div class="social-icon">
+                <a href="https://www.linkedin.com/in/estebanyguia/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/EstebanYguiaLizarbe" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <a href="ESTEBAN_YGUIA_CV.pdf" download="ESTEBAN_YGUIA_CV" class="btn">Descargar CV</a>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        
+        <div class="contenedor-flecha-proyecto">
+            <h2 class="heading">Proyectos</h2>
+            <!-- <img src="images/izquierda.png" alt="" class="btn-izquierda"> -->
+
+            <div class="carrusel">
+
+                <div class="container-project">
+                    <div class="image-project">
+                        <img src="images/techtrove.jpg" alt="" class="imagecomerce">
+                    </div>
+                    <div class="text-project-container">
+                        <div class="heading-project">Ecommerce Techtrove</div>
+                        <div class="raiting">
+                            <i class="fa-solid fa-star" class="star-project"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="project-description">
+                            Este es un ecommerce hacia una empresa de tecnologia hecha en grupo. El backend esta hecho con NodeJs Express la base de Datos es PostgresSql y en el frontend se uso React, Redux, TailwindCSS 
+                        </div>
+                        <div class="project-footer">
+                            <div class="tecnologia">FullStack JS</div>
+                            <div >
+                                <a class="btn" target="_blank" id="video-project" href="https://www.youtube.com/watch?v=16hp7OuyMQ4"><i class="fa-brands fa-youtube"></i> Video</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carrusel">
+                <div class="container-project" id="reverse-project">
+                    <div class="image-project">
+                        <img src="images/examio.jpg" alt="" class="imagecomerce">
+                    </div>
+                    <div class="text-project-container">
+                        <div class="heading-project">App de Producto con IA</div>
+                        <div class="raiting-fecha">
+                            <div class="stars-container">
+                                <i class="fa-solid fa-star" class="star-project"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> 
+                            </div>
+                            <p class="fecha-project">(Mayo 2024 - actualidad)</p>
+                        </div>
+                        <div class="project-description">
+                            Este va a ser una aplicacion que la empece ya que vi un problema en los profesores y es que pieren mucho tiempo haciendo examenes y en base a eso decidi crear ExamIO y solucionar el problema
+                        </div>
+                        <div class="project-footer">
+                            <div class="tecnologia">FullStack JS</div>
+                            <div class="tecnologia" id="pronto-project"><i class="fa-solid fa-gear"></i> Pronto...</div>
+                            <!-- <div class="btn" id="github-buton-project">
+                                GitHub
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carrusel">
+                <div class="container-project">
+                    <div class="image-project">
+                        <img src="images/paises.jpg" alt="" class="imagecomerce">
+                    </div>
+                    <div class="text-project-container">
+                        <div class="heading-project">Pagina FullStack de Paises</div>
+                        <div class="raiting">
+                            <i class="fa-solid fa-star" class="star-project"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <div class="project-description">
+                            Aplicaion FullStack donde pude poner a prueba mis conocimientos en Backend y Frontend esta hecho con React, Express, PostgresSQL, Redux, NodeJS ademas de un paginado y validación de formulario
+                        </div>
+                        <div class="project-footer">
+                            <div class="tecnologia">FullStack JS</div>
+                            <div >
+                                <a class="btn" id="github-buton-project" target="_blank" href="https://github.com/EstebanYguiaLizarbe/HenryPiCountries "><i class="fa-brands fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- 
+            <img src="images/izquierda.png" alt="" class="btn-izquierda"> -->
+        </div>
+
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="heading">Servicios</h2>
+
+        <div class="services-container">
+            <div class="service-box">
+                <div class="service-info">
+                    <h4>Front End Developer</h4>
+                    <p>Desarrollo el frontend de las paginas web para hacerlas mas accesibles para los clientes de manera que puedan ver un producto de calidad con el diseño y la experiencia de usuario efectiva</p>
+                </div>
+            </div>
+            
+            <div class="service-box">
+                <div class="service-info">
+                    <h4>Backend Developer</h4>
+                    <p>Desarrollo la parte de la logica de tal manera que los frontends puedan facilmente acceder a los datos, tambien ayudo en la seguridad de los datos y la verificacion de estos para evitar cualquier tipo de ataques</p>
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-info">
+                    <h4>Diseño Web</h4>
+                    <p>Diseño la pagina web con herramientas como Figma de forma que los desarrolladores frontends puedan concentrarse solo en el codigo y no en el diseño</p>
+                </div>
+            </div>
+
+            <img src="images/ux.png" class="image-service" alt="">
+            <img src="images/backend.png" class="image-service" alt="">
+            <img src="images/uxui.png" class="image-service" alt=""> 
+        </div>
+
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="heading">Skills</h2>
+        <div class="container">
+            <div class="row" id="skillscontainer">
+                <div class="bar">
+                    <div class="info">
+                        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png" alt=""> -->
+                         <img src="images/figma.png" alt="">
+                        <span>Figma</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png" alt=""> -->
+                         <img src="images/expres.png" alt="">
+                        <span>Express</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png" alt=""> -->
+                         <img src="images/node.png" alt="">
+                        <span>NodeJS</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png" alt=""> -->
+                         <img src="images/React-icon.png" alt="">
+                        <span>ReactJS</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png" alt=""> -->
+                         <img src="images/JavaScript-logo.png" alt="">
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png" alt=""> -->
+                         <img src="images/java.png" alt="">
+                        <span>Java</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png" alt=""> -->
+                         <img src="images/angular.png" alt="">
+                        <span>Angular</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png" alt=""> -->
+                         <img src="images/Typescript_logo_2020.png" alt="">
+                        <span>Typescript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contactame <span>a Mi</span></h2>
+        <form action="" method="POST">
+            <div class="input-box">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <!-- <input type="number" name="numero" placeholder="Numero Celular" required> -->
+                <input type="text" name="mensaje" placeholder="Motivo" required>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Tu Mensaje"></textarea>
+            </div>
+            <input type="submit" value="Enviar Mensaje" class="btn">
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.linkedin.com/in/estebanyguia/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/EstebanYguiaLizarbe" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <ul class="list">
+            <li><a href="#contact">FAQ</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#home">Acerca de</a></li>
+            <li><a href="#contact">Contacto</a></li>
+            <li><a href="#contact">Politica de Privacidad</a></li>
+        </ul>
+
+        <p class="copyright">
+            Esteban Yguia | Si lo quieres contactame
+        </p>
+    </footer>
+
+    <script src="main.js" ></script>
+</body>
+</html>
