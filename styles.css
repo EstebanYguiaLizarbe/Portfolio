@@ -823,6 +823,10 @@ footer .copyright{
     margin-left: 12px;
 }
 
+.seis-rem{
+    margin-top: 6rem;
+}
+
 /* .btn:hover{
     transform: scale(1.03);
     background-color: var(--main-color);
