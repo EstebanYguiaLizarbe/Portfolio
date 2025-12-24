@@ -1,0 +1,335 @@
+.contenedor_proyectos {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, 
+        #000000 0%, 
+        #37074d 50%, 
+        #000000 100%
+    );
+    padding: 28px 10%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.contenedor_titulo {
+    position: relative;
+}
+
+.titulo_proyectos {
+    color: white;
+    font-size: 72px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.carousel_wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.carousel_wrapper.carousel_transitioning {
+    opacity: 0.3;
+    transform: scale(0.98);
+}
+
+.carousel_track {
+    display: flex;
+    gap: 2rem;
+    cursor: grab;
+    user-select: none;
+    will-change: transform;
+    background-color: #000;
+    padding: 20px;
+    border-radius: 12px;
+    width: max-content;
+}
+
+.carousel_static {
+    cursor: default !important;
+    margin: 0 auto;
+    width: fit-content !important;
+    justify-content: center;
+}
+
+.proyecto_completo {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.imagen_container {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    transition: transform 0.3s ease;
+}
+
+.imagen_container:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.carousel_track.dragging {
+    cursor: grabbing;
+}
+
+.carousel_item {
+    flex-shrink: 0;
+    overflow: visible;
+}
+
+.botones_container {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}.proyecto_imagen {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.3s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    pointer-events: auto;
+}
+
+.imagen_container:hover .proyecto_imagen {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.boton_ver_detalle {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.boton_demo,
+.boton_github {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 10px 20px;
+    border-radius: 4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.boton_demo {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+}
+
+.boton_demo:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.boton_mostrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: linear-gradient(135deg, #37074d 0%, #1a0326 100%);
+    color: white;
+    border: 2px solid #8b4dad;
+}
+
+.boton_mostrar:hover {
+    background: linear-gradient(135deg, #4a0a63 0%, #37074d 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 77, 173, 0.5);
+}
+
+.boton_github {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+.boton_github:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.icono_demo,
+.icono_github {
+    font-size: 1.2rem;
+}
+
+.contenedor_ver_todos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+    margin-top: 4rem;
+}
+
+.titulo_todos {
+    font-size: 56px;
+    color: black;
+    text-shadow: 
+    -1px -1px 0 rgb(204, 204, 204),  
+     1px -1px 0 rgb(204, 204, 204),
+    -1px  1px 0 rgb(204, 204, 204),
+     1px  1px 0 rgb(204, 204, 204);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.titulo_todos.titulo_transitioning {
+    opacity: 0.3;
+    transform: translateY(-5px);
+}
+
+.contenedor_indicadores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    /* margin-top: 2rem; */
+}
+
+.indicador {
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 
+        -1px -1px 0 rgb(204, 204, 204),  
+         1px -1px 0 rgb(204, 204, 204),
+        -1px  1px 0 rgb(204, 204, 204),
+         1px  1px 0 rgb(204, 204, 204);
+}
+
+.indicador:hover {
+    transform: scale(1.2);
+}
+
+.indicador_activo {
+    background-color: white;
+    box-shadow: 
+        -1.5px -1.5px 0 white,  
+         1.5px -1.5px 0 white,
+        -1.5px  1.5px 0 white,
+         1.5px  1.5px 0 white;
+    transform: scale(1.3);
+}
+
+/* Botones triángulos */
+.triangulo_izquierdo,
+.triangulo_derecho {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.triangulo_izquierdo:hover,
+.triangulo_derecho:hover {
+    transform: scale(1.1);
+}
+
+.triangulo_left {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 28px solid black;
+    transition: all 0.3s ease;
+    filter: drop-shadow(-2px -2px 0 white) 
+            drop-shadow(2px -2px 0 white) 
+            drop-shadow(-2px 2px 0 white) 
+            drop-shadow(2px 2px 0 white);
+    position: relative;
+}
+
+.triangulo_right {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 28px solid black;
+    transition: all 0.3s ease;
+    filter: drop-shadow(-2px -2px 0 white) 
+            drop-shadow(2px -2px 0 white) 
+            drop-shadow(-2px 2px 0 white) 
+            drop-shadow(2px 2px 0 white);
+    position: relative;
+}
+
+.triangulo_left .triangulo_white_mini {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 7px solid white;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.triangulo_right .triangulo_white_mini {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7px solid white;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}

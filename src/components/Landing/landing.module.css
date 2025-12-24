@@ -1,0 +1,321 @@
+.bg_black{
+    background-color: #000;
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+.header_fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 17px);
+    z-index: 1000;
+    background-color: #000000;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.header_visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.header_hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.cuadrado{
+    height: 120px;
+    width: 120px;
+    color: red;
+    background-color: red;
+}
+
+.navbar_container{
+    padding: 10px 28px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.navbar_links{
+    font-size: 28px;
+    font-weight: 700;
+    /* color: #828282; */
+    color: rgb(134 134 139 / var(--tw-text-opacity, 1));
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.navbar_links:hover{
+    color: white;
+}
+
+.navbar_container_links{
+    display: flex;
+    align-items: center;
+    gap: 2.2rem;
+}
+
+.logo_esteban{
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.boton_descargar_cv{
+    background-color: black;
+    border-radius: 4rem;
+    border: 2px solid white;
+    color: white;
+    padding: 0.8rem 1.4rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+
+.icono{
+    font-size: 1.8rem;
+}
+
+.icono_container{
+    border: 2px solid white;
+    color: white;
+    padding: 0.6rem 0.7rem;
+    border-radius: 50%;
+}
+
+.icono_container:hover{
+    box-shadow: 0 0 25px rgb(51, 51, 51);
+}
+
+.boton_descargar_cv:hover{
+    box-shadow: 0 0 25px rgb(51, 51, 51);
+}
+
+.video_franja_container{
+    min-height: 100vh;
+    margin-left: 2rem;
+}
+
+.video_franja{
+    margin-left: 3.6rem;
+    height: 100vh;
+    min-height: 100vh;
+    object-fit: cover;
+    width: 100px;
+    position: sticky;
+    top: 0;
+}
+
+.general_container{
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.gradiente {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* Altura del degradado */
+  background: linear-gradient(to top, black, transparent);
+  pointer-events: none; /* para que no bloquee clics al video */
+}
+
+.gradiente_2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* Altura del degradado */
+  background: linear-gradient(to bottom, black, transparent);
+  pointer-events: none; /* para que no bloquee clics al video */
+}
+
+.video_container{
+    position: relative;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.franja_scroll {
+    margin-left: 3.6rem;
+    height: 200vh;
+    width: 100px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    animation: scrollVertical 8s linear infinite;
+}
+
+@keyframes scrollVertical {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+.imagen_franja {
+    width: 100px;
+    height: 100vh;
+    min-height: 100vh;
+    object-fit: cover;
+    flex-shrink: 0;
+    display: block;
+}
+
+.navbar_logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar_menu {
+    display: flex;
+    align-items: center;
+    gap: 2.2rem;
+    flex: 1;
+    justify-content: space-between;
+}
+
+/* Menú hamburguesa - oculto por defecto */
+.hamburger_menu {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.hamburger_line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.hamburger_line.open:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger_line.open:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger_line.open:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Responsive Design */
+@media (max-width: 1160px) {
+    .hamburger_menu {
+        display: flex;
+    }
+
+    .navbar_container {
+        position: relative;
+        padding: 15px 20px;
+    }
+
+    .navbar_menu {
+        position: fixed;
+        top: 0;
+        right: -110%;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(180deg, #000000 0%, #1a0326 100%);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 80px 30px 30px;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        gap: 3rem;
+    }
+
+    .navbar_menu.menu_open {
+        right: -10px;
+    }
+
+    .navbar_container_links {
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .navbar_links {
+        font-size: 24px;
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .boton_descargar_cv {
+        width: 100%;
+        text-align: center;
+    }
+
+    .icono_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .general_container {
+        /* justify-content: flex-start; */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar_links {
+        font-size: 20px;
+    }
+
+    .boton_descargar_cv {
+        font-size: 1rem;
+    }
+
+    .logo_esteban {
+        width: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar_menu {
+        width: 100%;
+    }
+
+    .navbar_links {
+        font-size: 18px;
+    }
+
+    .logo_esteban {
+        width: 60px;
+    }
+}
